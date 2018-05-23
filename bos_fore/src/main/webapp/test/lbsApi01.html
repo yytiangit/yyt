@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../js/jquery.js"></script>
+	</head>
+	<body>
+		<script type="text/javascript">
+	$.getJSON("http://api.map.baidu.com/geosearch/v3/nearby?geotable_id=188647&location=114.018994,22.549108&radius=1000&tags=娱乐&ak=VCaht8LoHeAgmHp7Bw5Fy54RaS3zPHNa&callback=?",{},function(data){
+		alert(data);
+		console.log(data);
+		$(data.contents).each(function(){
+			alert(this.address+"   "+this.province+"    "+this.city+"   "+this.location[0]);
+		})
+	})
+
+		</script>
+	</body>
+</html>
